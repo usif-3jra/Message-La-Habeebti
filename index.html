@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle for Alaa</title>
+    <style>
+        body {
+            background-color: #f9f6f6;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+        h1 {
+            color: #e75480;
+            margin-top: 20px;
+        }
+        .input-container {
+            margin-top: 20px;
+            width: 100%;
+            max-width: 400px;
+        }
+        input[type="text"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+        }
+        button {
+            width: calc(100% - 20px);
+            padding: 10px;
+            font-size: 16px;
+            background-color: #e75480;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            box-sizing: border-box;
+        }
+        button:hover {
+            background-color: #d14470;
+        }
+        .quote-image {
+            width: 300px; /* Set the desired width here */
+            height: auto;  /* Maintains aspect ratio */
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <h1>A Riddle Just for You, Alaa</h1>
+    <p>Enter the code to unlock the next surprise:</p>
+    <div class="input-container">
+        <input type="text" id="riddleInput" placeholder="Enter code here">
+        <button onclick="checkRiddle()">Submit</button>
+    </div>
+    <img src="https://usif-3jra.github.io/Message-La-Habeebti/A%20lovely%20image.jpeg" alt="A lovely image" class="quote-image">
+
+    <script>
+        function checkRiddle() {
+            const input = document.getElementById('riddleInput').value;
+            const correctAnswer = "01120101-251521191956";
+            if (input === correctAnswer) {
+                window.location.href = "success.html";
+            } else {
+                alert("Try again!");
+            }
+        }
+    </script>
+</body>
+</html>
