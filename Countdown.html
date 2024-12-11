@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown with Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            
+        }
+		h1 {
+            color: #222767;
+        }
+		p {
+            color: #222767;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        #countdown {
+            font-size: 3em;
+            margin-top: 20px;
+			color: #FF0000;
+        }
+
+        @media (max-width: 600px) {
+            #countdown {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Countdown to Your Special Date</h1>
+    <img src="https://usif-3jra.github.io/Message-La-Habeebti/image2.png" alt="Special Image" id="responsive-image">
+    <div id="countdown">Loading...</div>
+
+    <script>
+        // Set the target date
+        const targetDate = new Date("2025-01-25").getTime();
+
+        // Update the countdown every second
+        const countdownInterval = setInterval(() => {
+            const now = new Date().getTime();
+            const distance = targetDate - now;
+
+            // Calculate days, hours, minutes, and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+
+            // Display the countdown
+            document.getElementById("countdown").textContent =
+                `${days} Days`;
+
+            // If the countdown is over, display a message
+            if (distance < 0) {
+                clearInterval(countdownInterval);
+                document.getElementById("countdown").textContent = "The date has arrived!";
+            }
+        }, 1000);
+    </script>
+	<p>❤ Natrek ya rou7e ❤</p>
+	<p>❤ Bhebbek Alaa ❤</p>
+</body>
+</html>
